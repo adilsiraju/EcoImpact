@@ -1,7 +1,7 @@
 Impact Calculator
 -----------------
 
-A Python tool to predict environmental impacts (carbon reduced, energy saved, water conserved) based on investment amounts in various sustainability categories.
+An ML model to predict environmental impacts (carbon reduced, energy saved, water conserved) based on investment amounts in various sustainability categories.
 
 **Installation**
 
