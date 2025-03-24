@@ -61,12 +61,3 @@ text
 
 ## Credits
 Developed with assistance from xAI's Grok 3.
-Step 5: Test It
-
-    Save impact_calculator.py, requirements.txt, and README.md in your impact_calculator/ folder.
-    Open a terminal in that folder:
-    bash
-
-pip install -r requirements.txt
-python impact_calculator.py
-Test with inputs like ₹15,000, "Renewable Energy", "Solar" to verify it works.
