@@ -1,86 +1,124 @@
-Impact Calculator
------------------
+﻿**Impact Calculator - Environmental Sustainability Prediction**
 
-An ML model to predict environmental impacts (carbon reduced, energy saved, water conserved) based on investment amounts in various sustainability categories.
+**Overview**
+------------
+
+The **Impact Calculator** is a standalone Python tool that predicts the environmental impact of sustainable investments. It estimates the following metrics based on investment details:
+
+*   **Carbon Reduction (kg CO₂ saved)**
+    
+*   **Energy Savings (kWh saved/generated)**
+    
+*   **Water Conservation (liters saved)**
+    
+
+The model uses **machine learning (RandomForestRegressor)** trained on real-world sustainability data. It supports multiple **investment categories, locations, technologies, and project scales** to provide realistic impact estimates.
+
+**Features**
+------------
+
+✔ **Predicts sustainability impact** based on investment amount and category.✔ **Supports multiple project categories**, including Renewable Energy, Recycling, and Emission Control.✔ **Handles different locations & technologies** with built-in encodings.✔ **Uses machine learning models** for accurate predictions.✔ **Dynamically adjusts outputs** based on project scale, duration, and location.✔ **Persists trained models** in the models/ directory for reuse.✔ **Standalone script** (no Django or external dependencies required).
 
 **Installation**
+----------------
 
-1\. Clone or download this repository:
+### **Prerequisites**
 
-git clone [https://github.com/adilsiraju/EcoImpact.git](https://github.com/adilsiraju/EcoImpact.git)
+Ensure you have Python **3.8+** installed. Then, install the required dependencies:
 
-cd impact\_calculator
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   pip install numpy scikit-learn   `
 
-2\. Install dependencies:
+### **Clone the Repository**
 
-pip install -r requirements.txt
-
-3\. Run the script:
-
-python impact\_calculator.py
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git clone https://github.com/your-username/impact-calculator.git  cd impact-calculator   `
 
 **Usage**
+---------
 
-Run the script and input:
+### **Run the Impact Calculator**
 
-\- Investment amount (in ₹)
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   python impact_calculator.py   `
 
-\- Category (e.g., "Renewable Energy", "Water Conservation")
+### **Example Input & Output**
 
-\- Technology (e.g., "Solar", "Manual")
+#### **User Input:**
 
-**Example:**
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`Enter investment amount (₹): 50000    Enter category (e.g., 'Renewable Energy'): Renewable Energy    Enter technology (e.g., 'Solar'): Solar    Enter location (e.g., 'Uttar Pradesh'): Rajasthan`  
 
-Enter investment amount (₹): 15000
+#### **Output:**
 
-Enter category (e.g., 'Renewable Energy'): Renewable Energy
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`Results for Renewable Energy:    Amount Invested: ₹50000.00      Carbon Reduced: 750 kg      Energy Saved: 1000 kWh      Water Conserved: 50 L`  
 
-Enter technology (e.g., 'Solar'): Solar
+**How It Works**
+----------------
 
-Results for Renewable Energy:
+1.  **Loads pre-trained models** (or trains new ones if missing).
+    
+2.  **Encodes user inputs** (investment amount, category, location, technology).
+    
+3.  **Applies data transformation** (log scaling, category encoding).
+    
+4.  **Uses trained models** to predict impact metrics.
+    
+5.  **Adjusts results dynamically** based on project factors.
+    
+6.  **Prints final impact estimates** to the user.
+    
 
-Amount Invested: ₹15000.00
+**Model Training & Persistence**
+--------------------------------
 
-Carbon Reduced: 2000 kg
+*   **Stores models in models/** (carbon, energy, and water models).
+    
+*   **Uses pickle for persistence** (avoids retraining every run).
+    
+*   **Automatically trains models** if missing.
+    
 
-Energy Saved: 4000 kWh
+**Supported Investment Categories**
+-----------------------------------
 
-Water Conserved: 0 L
+1.  **Renewable Energy**
+    
+2.  **Recycling**
+    
+3.  **Emission Control**
+    
+4.  **Water Conservation**
+    
+5.  **Reforestation**
+    
+6.  **Sustainable Agriculture**
+    
+7.  **Clean Transportation**
+    
+8.  **Waste Management**
+    
+9.  **Green Technology**
+    
+10.  **Ocean Conservation**
+    
 
-**Categories**
+**Contributing**
+----------------
 
-\- Renewable Energy
+Contributions are welcome! To contribute:
 
-\- Recycling
+1.  Fork the repository.
+    
+2.  Create a new branch (feature-improvement).
+    
+3.  Commit and push changes.
+    
+4.  Submit a pull request.
+    
 
-\- Emission Control
+**License**
+-----------
 
-\- Water Conservation
+This project is licensed under the **MIT License**.
 
-\- Reforestation
+**Author**
+----------
 
-\- Sustainable Agriculture
-
-\- Clean Transportation
-
-\- Waste Management
-
-\- Green Technology
-
-\- Ocean Conservation
-
-**Technologies**
-
-\- Solar, Wind, Hydro, Organic, Mechanical, Chemical, Biofuel, EV, Manual, AI
-
-**Notes**
-
-\- Models are trained on synthetic data and saved to \`models/\`.
-
-\- Impacts scale linearly with investment, capped by category-specific limits.
-
-\- For custom use, modify \`ImpactCalculator\` class or training data in \`train\_model()\`.
-
-**Credits**
-
-Developed with assistance from xAI's Grok 3.
+**Mohammed Adil**For inquiries, reach out via GitHub or email.
