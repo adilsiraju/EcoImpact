@@ -23,7 +23,9 @@ The model uses **machine learning (RandomForestRegressor)** trained on real-worl
 
 ✔ **Handles different locations & technologies** with built-in encodings.
 
-✔ **Uses machine learning models** for accurate predictions.✔ **Dynamically adjusts outputs** based on project scale, duration, and location.
+✔ **Uses machine learning models** for accurate predictions.
+
+✔ **Dynamically adjusts outputs** based on project scale, duration, and location.
 
 ✔ **Persists trained models** in the models/ directory for reuse.
 
