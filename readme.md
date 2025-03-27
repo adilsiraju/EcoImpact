@@ -17,9 +17,7 @@ The model uses **machine learning (RandomForestRegressor)** trained on real-worl
 **Features**
 ------------
 
-✔ **Predicts sustainability impact
-** based on investment amount and category.
-✔ **Supports multiple project categories**, including Renewable Energy, Recycling, and Emission Control.✔ **Handles different locations & technologies** with built-in encodings.✔ **Uses machine learning models** for accurate predictions.✔ **Dynamically adjusts outputs** based on project scale, duration, and location.✔ **Persists trained models** in the models/ directory for reuse.✔ **Standalone script** (no Django or external dependencies required).
+✔ **Predicts sustainability impact** based on investment amount and category.✔ **Supports multiple project categories**, including Renewable Energy, Recycling, and Emission Control.✔ **Handles different locations & technologies** with built-in encodings.✔ **Uses machine learning models** for accurate predictions.✔ **Dynamically adjusts outputs** based on project scale, duration, and location.✔ **Persists trained models** in the models/ directory for reuse.✔ **Standalone script** (no Django or external dependencies required).
 
 **Installation**
 ----------------
